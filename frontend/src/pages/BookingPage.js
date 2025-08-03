@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import "../styles/pages/BookingPage.css";
@@ -6,7 +6,7 @@ import "../styles/pages/BookingPage.css";
 const BookingPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { bookingData, setBookingData, addAppointment } = useAppContext();
+  const { setBookingData, addAppointment } = useAppContext();
 
   const [doctor, setDoctor] = useState(null);
   const [formData, setFormData] = useState({
@@ -20,20 +20,22 @@ const BookingPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Mock doctor data
-  const mockDoctor = {
-  id: parseInt(id),
-  name: "Dr. Neha Sharma",
-  specialization: "Cardiology",
-  image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
-  fee: "₹1200",
-};
-setDoctor(mockDoctor);
-
+  // Mock doctor data wrapped in useMemo
+  const mockDoctor = useMemo(
+    () => ({
+      id: parseInt(id),
+      name: "Dr. Neha Sharma",
+      specialization: "Cardiology",
+      image:
+        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
+      fee: "₹1200",
+    }),
+    [id]
+  );
 
   useEffect(() => {
     setDoctor(mockDoctor);
-  }, [id]);
+  }, [mockDoctor]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

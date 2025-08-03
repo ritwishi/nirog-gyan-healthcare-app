@@ -7,42 +7,45 @@ import "../styles/pages/HomePage.css";
 const mockDoctors = [
   {
     id: 1,
-    name: "Dr. Neha Sharma",
+    name: "Dr. Sarah Johnson",
     specialization: "Cardiology",
-    experience: "15 years",
+    experience: "12 years",
     availability: "Available Today",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
-    fee: "₹1200",
+    image:
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
+    fee: "$200",
   },
   {
     id: 2,
-    name: "Dr. Amit Verma",
+    name: "Dr. Michael Chen",
     specialization: "Dermatology",
-    experience: "10 years",
+    experience: "8 years",
     availability: "Available Today",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
-    fee: "₹900",
+    image:
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
+    fee: "$150",
   },
   {
     id: 3,
-    name: "Dr. Priya Iyer",
+    name: "Dr. Emily Rodriguez",
     specialization: "Neurology",
-    experience: "12 years",
+    experience: "15 years",
     availability: "Fully Booked",
-    image: "https://images.unsplash.com/photo-1594824475337-af8a7c50b2ba?w=300&h=300&fit=crop&crop=face",
-    fee: "₹1300",
+    image:
+      "https://images.unsplash.com/photo-1594824475337-af8a7c50b2ba?w=300&h=300&fit=crop&crop=face",
+    fee: "$250",
   },
   {
     id: 4,
-    name: "Dr. Varun Singh",
+    name: "Dr. David Kumar",
     specialization: "Orthopedics",
-    experience: "11 years",
+    experience: "10 years",
     availability: "Available Today",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
-    fee: "₹1050",
+    image:
+      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
+    fee: "$180",
   },
 ];
-
 
 const HomePage = () => {
   const [doctors, setDoctors] = useState([]);

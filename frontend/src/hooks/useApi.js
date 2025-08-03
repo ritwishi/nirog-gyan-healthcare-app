@@ -20,7 +20,10 @@ export const useApi = (apiFunction, dependencies = []) => {
     };
 
     fetchData();
-  }, dependencies);
+  // Explicitly list dependencies to avoid spread in dependency array
+  // Example: [apiFunction, dep1, dep2]
+  // Pass dependencies explicitly, e.g. [apiFunction, dep1, dep2]
+  }, [apiFunction]); // Add more dependencies as needed
 
   const refetch = async () => {
     try {

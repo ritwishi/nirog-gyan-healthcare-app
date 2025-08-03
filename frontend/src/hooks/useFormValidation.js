@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export const useFormValidation = (initialValues, validationRules) => {
   const [values, setValues] = useState(initialValues);
@@ -6,40 +6,40 @@ export const useFormValidation = (initialValues, validationRules) => {
   const [touched, setTouched] = useState({});
 
   const handleChange = (name, value) => {
-    setValues(prev => ({
+    setValues((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
 
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const handleBlur = (name) => {
-    setTouched(prev => ({
+    setTouched((prev) => ({
       ...prev,
-      [name]: true
+      [name]: true,
     }));
 
     // Validate field on blur
     if (validationRules[name]) {
       const error = validationRules[name](values[name]);
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: error
+        [name]: error,
       }));
     }
   };
 
   const validate = () => {
     const newErrors = {};
-    
-    Object.keys(validationRules).forEach(field => {
+
+    Object.keys(validationRules).forEach((field) => {
       const error = validationRules[field](values[field]);
       if (error) {
         newErrors[field] = error;
@@ -47,10 +47,12 @@ export const useFormValidation = (initialValues, validationRules) => {
     });
 
     setErrors(newErrors);
-    setTouched(Object.keys(validationRules).reduce((acc, key) => {
-      acc[key] = true;
-      return acc;
-    }, {}));
+    setTouched(
+      Object.keys(validationRules).reduce((acc, key) => {
+        acc[key] = true;
+        return acc;
+      }, {})
+    );
 
     return Object.keys(newErrors).length === 0;
   };
@@ -69,6 +71,6 @@ export const useFormValidation = (initialValues, validationRules) => {
     handleBlur,
     validate,
     reset,
-    isValid: Object.keys(errors).length === 0
+    isValid: Object.keys(errors).length === 0,
   };
 };

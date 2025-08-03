@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import "../styles/pages/DoctorProfile.css";
@@ -9,25 +9,28 @@ const DoctorProfilePage = () => {
   const [loading, setLoading] = useState(true);
   const { setSelectedDoctor } = useAppContext();
 
-  // Mock doctor data
-  const mockDoctor = {
-  id: parseInt(id),
-  name: "Dr. Neha Sharma",
-  specialization: "Cardiology",
-  experience: "15 years",
-  availability: "Available Today",
-  image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
-  bio: "Dr. Neha Sharma is a renowned cardiologist in India with 15 years of experience in treating heart conditions. She specializes in preventive cardiology and interventional procedures.",
-  fee: "₹1200",
-  schedule: {
-    Monday: ["9:00 AM", "10:00 AM", "2:00 PM", "3:00 PM"],
-    Tuesday: ["9:00 AM", "11:00 AM", "1:00 PM", "4:00 PM"],
-    Wednesday: ["10:00 AM", "2:00 PM", "3:00 PM"],
-    Thursday: ["9:00 AM", "10:00 AM", "2:00 PM", "4:00 PM"],
-    Friday: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"],
-  },
-};
-
+  // Mock doctor data wrapped in useMemo
+  const mockDoctor = useMemo(
+    () => ({
+      id: parseInt(id),
+      name: "Dr. Neha Sharma",
+      specialization: "Cardiology",
+      experience: "15 years",
+      availability: "Available Today",
+      image:
+        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
+      bio: "Dr. Neha Sharma is a renowned cardiologist in India with 15 years of experience in treating heart conditions. She specializes in preventive cardiology and interventional procedures.",
+      fee: "₹1200",
+      schedule: {
+        Monday: ["9:00 AM", "10:00 AM", "2:00 PM", "3:00 PM"],
+        Tuesday: ["9:00 AM", "11:00 AM", "1:00 PM", "4:00 PM"],
+        Wednesday: ["10:00 AM", "2:00 PM", "3:00 PM"],
+        Thursday: ["9:00 AM", "10:00 AM", "2:00 PM", "4:00 PM"],
+        Friday: ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"],
+      },
+    }),
+    [id]
+  );
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,7 +38,7 @@ const DoctorProfilePage = () => {
       setSelectedDoctor(mockDoctor);
       setLoading(false);
     }, 1000);
-  }, [id]);
+  }, [mockDoctor, setSelectedDoctor]);
 
   if (loading) {
     return (
