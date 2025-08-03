@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Neha Sharma",
+    "specialization": "Cardiology",
+    "experience": "15 years",
+    "availability": "Available Today",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face",
+    "bio": "Dr. Neha Sharma is a renowned cardiologist in India with 15 years of experience in treating heart conditions. She specializes in preventive cardiology and interventional procedures.",
+    "fee": 1200,
+    "qualifications": ["MBBS", "MD Cardiology", "DM", "FACC"],
+    "languages": ["Hindi", "English"],
+    "rating": 4.8,
+    "reviewCount": 240,
+    "schedule": {
+      "Monday": ["9:00 AM", "10:00 AM", "2:00 PM", "3:00 PM"],
+      "Tuesday": ["9:00 AM", "11:00 AM", "1:00 PM", "4:00 PM"],
+      "Wednesday": ["10:00 AM", "2:00 PM", "3:00 PM"],
+      "Thursday": ["9:00 AM", "10:00 AM", "2:00 PM", "4:00 PM"],
+      "Friday": ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM"]
+    },
+    "hospital": "Fortis Escorts Heart Institute",
+    "address": "Okhla Road, New Delhi, 110025, India",
+    "phone": "+91 98765 43210",
+    "email": "dr.neha@fortis.com"
+  },
+  {
+    "id": "2",
+    "name": "Dr. Amit Verma",
+    "specialization": "Dermatology",
+    "experience": "10 years",
+    "availability": "Available Today",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
+    "bio": "Dr. Amit Verma is a board-certified dermatologist from Mumbai specializing in medical and cosmetic dermatology, with vast experience treating skin conditions.",
+    "fee": 900,
+    "qualifications": ["MBBS", "MD Dermatology", "FAAD"],
+    "languages": ["English", "Hindi", "Marathi"],
+    "rating": 4.7,
+    "reviewCount": 170,
+    "schedule": {
+      "Monday": ["10:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
+      "Tuesday": ["9:00 AM", "1:00 PM", "3:00 PM", "5:00 PM"],
+      "Wednesday": ["9:00 AM", "10:00 AM", "2:00 PM", "3:00 PM"],
+      "Thursday": ["10:00 AM", "11:00 AM", "1:00 PM", "4:00 PM"],
+      "Friday": ["9:00 AM", "2:00 PM", "3:00 PM", "4:00 PM"]
+    },
+    "hospital": "Kokilaben Dhirubhai Ambani Hospital",
+    "address": "Four Bungalows, Andheri West, Mumbai, 400053, India",
+    "phone": "+91 98111 22334",
+    "email": "dr.amit@kokilabenhospital.com"
+  },
+  {
+    "id": "3",
+    "name": "Dr. Priya Iyer",
+    "specialization": "Neurology",
+    "experience": "12 years",
+    "availability": "Fully Booked",
+    "image": "https://images.unsplash.com/photo-1594824475337-af8a7c50b2ba?w=300&h=300&fit=crop&crop=face",
+    "bio": "Dr. Priya Iyer is a reputed neurologist in Chennai, specializing in headaches and epilepsy with 12 years of dedicated clinical service.",
+    "fee": 1300,
+    "qualifications": ["MBBS", "MD Neurology", "DM", "FAAN"],
+    "languages": ["English", "Tamil", "Hindi"],
+    "rating": 4.9,
+    "reviewCount": 195,
+    "schedule": {
+      "Monday": [],
+      "Tuesday": [],
+      "Wednesday": ["2:00 PM"],
+      "Thursday": [],
+      "Friday": ["10:00 AM"]
+    },
+    "hospital": "Apollo Hospitals, Chennai",
+    "address": "21 Greams Lane, Thousand Lights, Chennai, 600006, India",
+    "phone": "+91 98456 77889",
+    "email": "dr.priya@apollohospitals.com"
+  },
+  {
+    "id": "4",
+    "name": "Dr. Varun Singh",
+    "specialization": "Orthopedics",
+    "experience": "11 years",
+    "availability": "Available Today",
+    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
+    "bio": "Dr. Varun Singh is an orthopedic surgeon in Lucknow specializing in sports medicine and joint replacement, with over 11 years of expertise.",
+    "fee": 1050,
+    "qualifications": ["MBBS", "MS Orthopedics", "FAAOS"],
+    "languages": ["English", "Hindi"],
+    "rating": 4.6,
+    "reviewCount": 180,
+    "schedule": {
+      "Monday": ["8:00 AM", "9:00 AM", "2:00 PM", "3:00 PM"],
+      "Tuesday": ["8:00 AM", "10:00 AM", "1:00 PM", "4:00 PM"],
+      "Wednesday": ["9:00 AM", "11:00 AM", "2:00 PM", "3:00 PM"],
+      "Thursday": ["8:00 AM", "9:00 AM", "1:00 PM", "4:00 PM"],
+      "Friday": ["9:00 AM", "10:00 AM", "2:00 PM", "3:00 PM"]
+    },
+    "hospital": "SGPGIMS",
+    "address": "Raebareli Road, Lucknow, 226014, Uttar Pradesh, India",
+    "phone": "+91 99555 11234",
+    "email": "dr.varun@sgpgi.ac.in"
+  }
+]
